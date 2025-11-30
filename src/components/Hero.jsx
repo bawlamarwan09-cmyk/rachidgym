@@ -1,4 +1,5 @@
 import React from "react";
+import LazySection from "./LazySection"; 
 
 export default function HeroSection() {
   return (
