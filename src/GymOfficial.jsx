@@ -9,7 +9,10 @@ import ScheduleSection from "./components/Schedule.jsx";
 import ContactSection from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import "./components/animations.css";
+import LazySection from "./components/LazySection.jsx";
+
 export default function LandingPage() {
+
   /* ------------------------- SCROLL REVEAL ------------------------- */
   useEffect(() => {
     const targets = document.querySelectorAll(".soft-reveal, .card-animate");
@@ -74,6 +77,7 @@ export default function LandingPage() {
     observer.observe(stack);
   }, []);
 
+  /* ------------------------- SCROLL-SHOW ------------------------- */
   useEffect(() => {
     const elems = document.querySelectorAll(".scroll-show");
     const observer = new IntersectionObserver(
@@ -88,6 +92,7 @@ export default function LandingPage() {
     elems.forEach((el) => observer.observe(el));
   }, []);
 
+  /* ------------------------- SCHEDULE ANIM ------------------------- */
   useEffect(() => {
     const el = document.querySelector("#schedule");
     if (!el) return;
@@ -102,23 +107,23 @@ export default function LandingPage() {
     );
 
     observer.observe(el);
-
     return () => observer.disconnect();
   }, []);
 
-
   return (
     <div className="bg-white text-black min-h-screen font-sans">
-        <Navbar />
-        <HeroSection />
-        <FeaturesSection />
-        <CoachesSection />
-        <PricingSection />
-        <ScheduleSection />
-        <GallerySection />
-        <ContactSection />
-        <Footer />
+      
+      <Navbar />
 
+      <LazySection><HeroSection /></LazySection>
+      <LazySection><FeaturesSection /></LazySection>
+      <LazySection><CoachesSection /></LazySection>
+      <LazySection><PricingSection /></LazySection>
+      <LazySection><ScheduleSection /></LazySection>
+      <LazySection><GallerySection /></LazySection>
+      <LazySection><ContactSection /></LazySection>
+
+      <Footer />
     </div>
   );
 }
