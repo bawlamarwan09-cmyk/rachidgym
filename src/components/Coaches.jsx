@@ -87,8 +87,7 @@ export default function CoachesSection() {
               ]}
             />
 
-            {/* ... نفس الشي للباقي */}
-            
+
           </div>
 
         </div>
@@ -107,7 +106,7 @@ function CoachCard({ name, title, extras }) {
       
       <img 
         loading="lazy"
-        src="https://ik.imagekit.io/latsqiyxk/me.PNG"
+        src="https://ik.imagekit.io/latsqiyxk/rachid.jpeg"
         className="w-[260px] md:w-[300px] -mt-28 drop-shadow-2xl relative z-10 tilt-img"
         alt="coach"
       />
