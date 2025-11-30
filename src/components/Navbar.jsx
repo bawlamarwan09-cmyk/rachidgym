@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { useContext } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Navbar() {
-  
+  const [open, setOpen] = useState(false);
+
   /* === NAVBAR SHADOW ON SCROLL === */
   useEffect(() => {
     const nav = document.querySelector(".nav");
@@ -20,12 +20,16 @@ export default function Navbar() {
 
           {/* LOGO */}
           <div className="flex items-center gap-3">
-            <img src="https://ik.imagekit.io/latsqiyxk/logo.jpg" className="h-10 w-10 rounded-md" alt="logo" />
+            <img
+              src="https://ik.imagekit.io/latsqiyxk/logo.jpg"
+              className="h-10 w-10 rounded-md"
+              alt="logo"
+            />
             <h1 className="text-2xl font-extrabold">POWER GYM</h1>
           </div>
 
-          {/* LINKS */}
-          <div className="space-x-6 text-lg font-bold">
+          {/* DESKTOP LINKS */}
+          <div className="hidden md:flex space-x-6 text-lg font-bold">
             <a href="#hero" className="hover:text-yellow-500">Home</a>
             <a href="#features" className="hover:text-yellow-500">Features</a>
             <a href="#team" className="hover:text-yellow-500">Coaches</a>
@@ -34,7 +38,26 @@ export default function Navbar() {
             <a href="#contact" className="hover:text-yellow-500">Contact</a>
           </div>
 
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className="md:hidden text-3xl font-bold"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? "✖" : "☰"}
+          </button>
         </div>
+
+        {/* MOBILE MENU */}
+        {open && (
+          <div className="md:hidden mt-4 bg-white shadow-lg rounded-lg p-4 space-y-4 text-lg font-semibold">
+            <a href="#hero" className="block hover:text-yellow-500">Home</a>
+            <a href="#features" className="block hover:text-yellow-500">Features</a>
+            <a href="#team" className="block hover:text-yellow-500">Coaches</a>
+            <a href="#pricing" className="block hover:text-yellow-500">Pricing</a>
+            <a href="#gallery" className="block hover:text-yellow-500">Gallery</a>
+            <a href="#contact" className="block hover:text-yellow-500">Contact</a>
+          </div>
+        )}
       </nav>
 
       {/* === NAVBAR STYLE === */}
