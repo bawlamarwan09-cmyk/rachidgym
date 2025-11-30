@@ -1,0 +1,518 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+@layer components {
+  .fade-in {
+    @apply opacity-0 translate-y-3 animate-[fadeIn_.4s_ease-out_forwards];
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 10px rgba(255, 221, 0, 0.7), 0 0 20px rgba(255, 221, 0, 0.4);
+  }
+
+  .btn-pulse {
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 221, 0, .6); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 221, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 221, 0, 0); }
+  }
+}
+@layer components {
+  /* Main 3D Lift */
+  .lift-3d {
+    transition: transform .25s ease, box-shadow .25s ease;
+    transform: perspective(700px) translateZ(0px);
+  }
+  .lift-3d:hover {
+    transform: perspective(700px) translateZ(18px) rotateX(2deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15),
+                0 0 15px rgba(255, 221, 0, 0.4);
+  }
+
+  /* 3D Button */
+  .btn-3d {
+    transition: transform .15s ease, box-shadow .2s;
+    box-shadow: 0 4px 0px #b38a00;
+  }
+  .btn-3d:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: 0 2px 0px #806400;
+  }
+
+  /* Neon glow */
+  .glow {
+    box-shadow: 0 0 12px rgba(255, 221, 0, 0.7),
+                0 0 20px rgba(255, 221, 0, 0.4),
+                0 0 25px rgba(255, 221, 0, 0.3);
+  }
+
+  /* Table row 3D hover */
+  .row-3d {
+    transition: transform .2s ease, background .2s;
+  }
+  .row-3d:hover {
+    transform: perspective(600px) translateZ(15px);
+    background: rgba(255, 221, 0, 0.2);
+  }
+}
+@layer components {
+  /* Fade in effect */
+  .fade-in {
+    @apply opacity-0 translate-y-3 animate-[fadeIn_.45s_ease-out_forwards];
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Lift card/table 3D */
+  .lift-3d {
+    transition: transform .25s ease, box-shadow .25s ease;
+    transform: perspective(700px) translateZ(0);
+  }
+  .lift-3d:hover {
+    transform: perspective(700px) translateZ(18px) rotateX(1deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15),
+                0 0 15px rgba(255, 221, 0, 0.4);
+  }
+
+  /* Neon Glow */
+  .glow {
+    box-shadow: 0 0 12px rgba(255, 221, 0, 0.8),
+                0 0 22px rgba(255, 221, 0, 0.5);
+  }
+
+  /* Pulsing Glow Button */
+  .btn-pulse {
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 221, 0, .6); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 221, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 221, 0, 0); }
+  }
+
+  /* 3D Buttons */
+  .btn-3d {
+    transition: transform .15s ease, box-shadow .2s ease;
+    box-shadow: 0 4px 0px #b38a00;
+  }
+  .btn-3d:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: 0 2px 0px #806400;
+  }
+
+  /* Table row 3D hover */
+  .row-3d {
+    transition: transform .2s ease, background .2s;
+  }
+  .row-3d:hover {
+    transform: perspective(600px) translateZ(14px);
+    background: rgba(255, 221, 0, 0.25);
+  }
+}
+@layer components {
+  .fade-in {
+    @apply opacity-0 translate-y-3 animate-[fadeIn_.45s_ease-out_forwards];
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .lift-3d {
+    transition: transform .25s ease, box-shadow .25s ease;
+    transform: perspective(700px) translateZ(0);
+  }
+  .lift-3d:hover {
+    transform: perspective(700px) translateZ(14px) rotateX(1deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15),
+                0 0 14px rgba(255, 221, 0, 0.45);
+  }
+
+  .glow {
+    box-shadow: 0 0 12px rgba(255, 221, 0, 0.8),
+                0 0 22px rgba(255, 221, 0, 0.5);
+  }
+
+  .btn-3d {
+    transition: transform .15s ease, box-shadow .2s ease;
+    box-shadow: 0 4px 0px #b38a00;
+  }
+  .btn-3d:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: 0 2px 0px #806400;
+  }
+
+  .btn-pulse {
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 221, 0, .6); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 221, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 221, 0, 0); }
+  }
+
+  .row-3d {
+    transition: transform .2s ease, background .2s;
+  }
+  .row-3d:hover {
+    transform: perspective(600px) translateZ(12px);
+    background: rgba(255, 221, 0, 0.25) !important;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnim 0.6s ease forwards;
+}
+
+@keyframes fadeInAnim {
+  to {
+    opacity: 1;
+  }
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpAnim 0.5s ease forwards;
+}
+
+@keyframes slideUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ====== 3D LIFT EFFECT ====== */
+.lift-3d {
+  transition: 0.25s transform ease, 0.25s box-shadow ease;
+}
+.lift-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 200, 0, 0.35);
+}
+
+/* ====== 3D BUTTON ====== */
+.btn-3d {
+  box-shadow: 0 4px 0 #00000030;
+  transition: 0.2s ease;
+}
+.btn-3d:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #00000030;
+}
+
+/* ====== GLOW YELLOW ====== */
+.glow {
+  box-shadow: 0 0 12px rgba(255, 200, 0, 0.6);
+}
+
+/* ====== FADE-IN ANIMATION ====== */
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== TABLE ROW HOVER ====== */
+.row-3d:hover {
+  background: #fff7cc !important;
+  transition: 0.25s;
+}
+/* ----- SOFT SHADOW GLOBAL ----- */
+.lift-3d {
+  transition: 0.25s ease;
+}
+.lift-3d:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* ----- ROW HOVER ----- */
+.row-3d {
+  transition: 0.25s ease;
+}
+.row-3d:hover {
+  background: #fffbe6 !important;
+  transform: scale(1.01);
+}
+
+/* ----- YELLOW GLOW ----- */
+.glow {
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.7);
+}
+
+/* ----- BUTTON 3D ----- */
+.btn-3d {
+  transition: 0.2s ease;
+  transform: translateY(0px);
+}
+.btn-3d:active {
+  transform: translateY(2px);
+}
+
+/* ----- HOVER SCALE ----- */
+.btn-pulse:hover {
+  transform: scale(1.05);
+}
+
+/* ----- SOFT TABLE SHADOW ----- */
+.table-shadow {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+/* Fade + Slide Down */
+@keyframes dashboardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-dashboard {
+  animation: dashboardAppear 0.6s ease-out forwards;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.18s ease-out;
+}
+.decorative-arabic {
+  font-family: "Amiri", serif;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+
+  /* GOLD GRADIENT */
+  background: linear-gradient(90deg, #d4a017, #f7c948, #d4a017);
+
+  /* REQUIRED FOR TEXT GRADIENT – no warnings */
+  background-clip: text;              /* Standard property */
+  -webkit-background-clip: text;      /* Safari / Chrome */
+
+  color: transparent;                 /* Standard way */
+  -webkit-text-fill-color: transparent; /* Safari fix */
+}
+
+.decorative-arabic::after {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 2px;
+  margin: 3px auto 0 auto;
+  background: linear-gradient(to right, transparent, #d4a017, transparent);
+}
+/* -------------------- Lens Flare Impact Animation -------------------- */
+@keyframes flareImpact {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  40% {
+    opacity: 0.7;
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.flare-impact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 200, 0.9),
+    rgba(255, 200, 0, 0.2),
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* -------------------- Camera Shake -------------------- */
+@keyframes cameraShake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-4px, 2px) rotate(-0.6deg);
+  }
+  40% {
+    transform: translate(3px, -3px) rotate(0.4deg);
+  }
+  60% {
+    transform: translate(-2px, 3px) rotate(-0.3deg);
+  }
+  80% {
+    transform: translate(2px, -2px) rotate(0.2deg);
+  }
+}
+
+.shake-on-reveal.revealed {
+  animation: cameraShake 0.35s ease-out;
+}
+
+/* -------------------- Gold Glow -------------------- */
+.glow-gold {
+  text-shadow: 0 0 12px rgba(250, 200, 20, 0.7), 0 0 24px rgba(250, 200, 20, 0.5);
+}
+
+/* -------------------- Film Grain -------------------- */
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.13;
+  mix-blend-mode: overlay;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------- Lens Flare Impact -------------------- */
+@keyframes flareImpact {
+  0% { opacity: 0; transform: scale(0.5); }
+  20% { opacity: 1; transform: scale(1.3); }
+  40% { opacity: 0.7; transform: scale(1.6); }
+  100% { opacity: 0; transform: scale(2); }
+}
+
+.flare-impact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255,255,200,0.9), rgba(255,200,0,0.2), transparent);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* -------------------- Camera Shake -------------------- */
+@keyframes cameraShake {
+  0%, 100% { transform: translate(0,0); }
+  20% { transform: translate(-4px,2px) rotate(-0.6deg); }
+  40% { transform: translate(3px,-3px) rotate(0.4deg); }
+  60% { transform: translate(-2px,3px) rotate(-0.3deg); }
+  80% { transform: translate(2px,-2px) rotate(0.2deg); }
+}
+
+.shake-on-reveal.revealed {
+  animation: cameraShake 0.35s ease-out;
+}
+
+/* -------------------- Gold Glow -------------------- */
+.glow-gold {
+  text-shadow: 0 0 12px rgba(250,200,20,0.7), 0 0 24px rgba(250,200,20,0.5);
+}
+
+/* -------------------- Stronger Parallax -------------------- */
+.hero-parallax {
+  will-change: transform;
+  transform: translateY(var(--scrollY)) scale(1.1);
+  transition: transform 0.1s linear;
+}
+
+/* -------------------- Film Grain -------------------- */
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.13;
+  mix-blend-mode: overlay;
+}

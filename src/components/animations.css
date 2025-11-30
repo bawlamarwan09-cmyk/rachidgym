@@ -1,0 +1,179 @@
+        html { scroll-behavior: smooth; }
+
+        .nav-scrolled {
+          box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+          backdrop-filter: blur(6px);
+        }
+
+        /* Soft Reveal */
+        .soft-reveal {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all .9s cubic-bezier(.16,1,.3,1);
+        }
+        .soft-reveal.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Coach 3D */
+        .coach-card {
+          transition: transform .4s ease;
+          transform-style: preserve-3d;
+        }
+        .coach-img {
+          transform: translateZ(40px);
+          transition: .3s;
+          border-radius: 20px;
+        }
+
+        /* ---- GALLERY STACK ---- */
+        .stack-container {
+          position: relative;
+          width: 340px;
+          height: 240px;
+          margin: 0 auto;
+        }
+
+        .stack-img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          object-fit: cover;
+          opacity: 0;
+          transition: all .8s cubic-bezier(.16,1,.3,1);
+        }
+
+        /* Before scroll (stacked) */
+        .stack-1 { z-index: 6; transform: translate(0px, 0px) rotate(-2deg); }
+        .stack-2 { z-index: 5; transform: translate(0px, 0px) rotate(4deg); }
+        .stack-3 { z-index: 4; transform: translate(0px, 0px) rotate(-6deg); }
+        .stack-4 { z-index: 3; transform: translate(0px, 0px) rotate(2deg); }
+        .stack-5 { z-index: 2; transform: translate(0px, 0px) rotate(-4deg); }
+        .stack-6 { z-index: 1; transform: translate(0px, 0px) rotate(3deg); }
+
+        /* After scroll (GRID layout) */
+        .stack-expand {
+          width: 100%;
+          height: auto;
+          display: grid !important;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 20px;
+          padding: 20px;
+        }
+
+        .stack-expand .stack-img {
+          position: relative;
+          width: 100%;
+          height: 240px;
+          opacity: 1;
+          transform: translate(0, 0) rotate(0deg) scale(1);
+        }
+
+        /* POP OUT COACH */
+        .pop-card {
+          position: relative;
+          overflow: visible;
+        }
+
+        .pop-img {
+          width: 500px;
+          position: absolute;
+          top: -60px;
+          left: 90%;
+          transform: translateX(-50%);
+          z-index: 10;
+          transition: .3s;
+          filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
+        }
+
+        .pop-card:hover .pop-img {
+          transform: translateX(-50%) scale(1.07);
+        }
+
+        /* Scroll Animation */
+        .scroll-show {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 0.8s cubic-bezier(.16,1,.3,1);
+        }
+
+        .scroll-show.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* 3D Tilt */
+        .tilt-box {
+          transform-style: preserve-3d;
+          transition: transform 0.3s ease;
+        }
+
+        .tilt-box:hover {
+          transform: rotateX(6deg) rotateY(6deg) scale(1.03);
+        }
+
+        .tilt-img {
+          transform: translateZ(40px);
+          transition: 0.3s ease;
+        }
+
+        .tilt-box:hover .tilt-img {
+          transform: translateZ(60px);
+        }
+
+        /* Base info (visible by default) */
+        .info-primary {
+          transition: all 0.4s ease;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Hide primary on hover */
+        .tilt-box:hover .info-primary {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+
+        /* Extra info (hidden by default) */
+        .info-extra {
+          position: absolute;
+          left: 0;
+          top: 70px;
+          width: 100%;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: all 0.45s cubic-bezier(.16,1,.3,1);
+        }
+
+        /* Show extra info on hover */
+        .tilt-box:hover .info-extra {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .schedule-reveal {
+          opacity: 0;
+          transform: translateY(25px);
+          transition: all 1s cubic-bezier(.16,1,.3,1);
+        }
+
+        .schedule-reveal.show {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .schedule-anim {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: all 0.9s cubic-bezier(.16,1,.3,1);
+        }
+
+        .schedule-anim.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+  
+
+      
