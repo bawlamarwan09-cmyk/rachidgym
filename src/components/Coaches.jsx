@@ -106,7 +106,7 @@ function CoachCard({ name, title, extras }) {
       
       <img 
         loading="lazy"
-        src="https://ik.imagekit.io/latsqiyxk/pixelcut-export.png"
+        src="https://ik.imagekit.io/latsqiyxk/me.PNG"
         className="w-[260px] md:w-[300px] -mt-28 drop-shadow-2xl relative z-10 tilt-img"
         alt="coach"
       />
