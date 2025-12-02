@@ -61,13 +61,13 @@ export default function GallerySection() {
         <div className="mt-16 flex justify-center">
           <div id="stack" className="stack-container">
             {[
-              "https://ik.imagekit.io/latsqiyxk/imgs/p5.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p2.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p3.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p4.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p1.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p5.jpg",
-              "https://ik.imagekit.io/latsqiyxk/imgs/p5.jpg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.58%20(4).jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.59%20(1).jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.59.jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.58%20(1).jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.58%20(2).jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.58%20(3).jpeg",
+              "https://ik.imagekit.io/latsqiyxk/WhatsApp%20Image%202025-11-30%20at%2016.43.58.jpeg",
               "https://ik.imagekit.io/latsqiyxk/imgs/p5.jpg",
             ].map((src, i) => (
               <img
