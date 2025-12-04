@@ -11,7 +11,11 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await api.post("/login.php", { email, password });
+      const form = new FormData();
+      form.append("email", email);
+      form.append("password", password);
+
+      const res = await api.post("/login.php", form); // ✔ FormData
 
       if (!res.data.success) {
         alert(res.data.message);
