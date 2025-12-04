@@ -15,7 +15,7 @@ export default function Login() {
       form.append("email", email);
       form.append("password", password);
 
-      const res = await api.post("/login.php", form); // ✔ FormData
+const res = await api.post("/login.php", form);
 
       if (!res.data.success) {
         alert(res.data.message);
