@@ -17,11 +17,11 @@ export default function App() {
   <Route path="/login" element={<Login />} />
   <Route path="/coach-absence" element={<CoachAbsence />} />
     <Route path="/caisier" element={<Caisier/> }/>
-    <Route path="/" element={<GymOfficial/>}/>
+    <Route path="/gym" element={<GymOfficial/>}/>
  <Route element={<AppLayout />}>
 
   <Route
-    path="/dashboard "
+    path="/"
     element={
       <AdminRoute>
         <Dashboard />
