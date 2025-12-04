@@ -1,6 +1,6 @@
 import axios from "axios";
 const api = axios.create({
-  baseURL: "http://localhost/gym",
+  baseURL: "https://rachidgym.infinityfreeapp.com",
   timeout: 10000,
 });
 export default api;
