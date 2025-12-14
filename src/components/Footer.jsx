@@ -1,43 +1,75 @@
 import React from "react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 mt-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 px-6">
+    <footer className="bg-black text-white py-16 mt-20 relative overflow-hidden">
+
+      {/* Subtle gradient glow */}
+      <div className="absolute inset-0 bg-gradient-to-t from-yellow-500/10 to-transparent pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12 px-6 relative z-10">
 
         {/* Brand */}
         <div>
-          <h3 className="text-xl font-extrabold mb-3">POWER GYM</h3>
-          <p className="opacity-80 text-sm">
-            Transform your body, elevate your life.
+          <h3 className="text-2xl font-extrabold mb-3 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            POWER GYM
+          </h3>
+          <p className="opacity-70 text-sm leading-relaxed">
+            Transform your body, elevate your mind.<br />
+            Strength. Discipline. Lifestyle.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-extrabold mb-3">Quick Links</h3>
-          <ul className="space-y-2 opacity-80">
-            <li><a href="#features" className="hover:text-yellow-500">Features</a></li>
-            <li><a href="#pricing" className="hover:text-yellow-500">Pricing</a></li>
-            <li><a href="#team" className="hover:text-yellow-500">Coaches</a></li>
-            <li><a href="#contact" className="hover:text-yellow-500">Contact</a></li>
+          <h3 className="text-xl font-extrabold mb-4">Quick Links</h3>
+          <ul className="space-y-3 opacity-80">
+            {[
+              ["#features", "Features"],
+              ["#pricing", "Pricing"],
+              ["#team", "Coaches"],
+              ["#contact", "Contact"],
+            ].map(([href, label], i) => (
+              <li key={i}>
+                <a
+                  href={href}
+                  className="hover:text-yellow-500 transition-colors"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-extrabold mb-3">Contact</h3>
-          <ul className="space-y-2 opacity-80 text-sm">
-            <li>📍 Rabat, Morocco</li>
-            <li>📞 +212 600 000 000</li>
-            <li>📧 contact@powergym.com</li>
+          <h3 className="text-xl font-extrabold mb-4">Contact</h3>
+          <ul className="space-y-3 opacity-80 text-sm">
+
+            <li className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-yellow-500" />
+              El MARSA LAAYOUNE, Morocco
+            </li>
+
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-yellow-500" />
+              +212 662-691-493
+            </li>
+
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-yellow-500" />
+              contact@powergym.com
+            </li>
+
           </ul>
         </div>
 
       </div>
 
-      {/* Bottom Line */}
-      <div className="text-center mt-10 opacity-60 text-sm">
+      {/* Bottom */}
+      <div className="text-center mt-12 opacity-60 text-sm relative z-10 border-t border-white/10 pt-6">
         © {new Date().getFullYear()} POWER GYM — All Rights Reserved.
       </div>
     </footer>
