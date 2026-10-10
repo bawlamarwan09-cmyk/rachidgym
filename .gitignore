@@ -68,7 +68,3 @@ dist-ssr
 *.mov
 *.avi
 
-
-# Boosthis downloaded kit and documentation
-/boosthis-kit-web.tar.gz
-/BOOSTHIS_*

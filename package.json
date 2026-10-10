@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
-    "@workspace/boosthis-runtime-web": "file:lib/boosthis-runtime-web",
     "axios": "^1.13.2",
     "bootstrap": "^5.3.8",
     "chart.js": "^4.5.1",
