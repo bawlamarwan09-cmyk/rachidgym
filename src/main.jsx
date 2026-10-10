@@ -15,8 +15,10 @@ startWebVitals({ bubble: true })
 enableTelemetry({
   installId: '6bbda6c1-812a-4cc2-ae4f-7a0f75c33f52',
   appName: 'RachidGym Test',
-  endUserConsent: 'withheld',
-  issuesOnly: true,
+  endUserConsent:
+  import.meta.env.VITE_VERCEL_ENV === 'preview'
+    ? 'granted'
+    : 'withheld',
   sendPageMap: false,
   traceSameOrigin: false,
   inviteKey: import.meta.env.VITE_BOOSTHIS_INVITE_KEY,
