@@ -18,7 +18,8 @@ enableTelemetry({
   endUserConsent: 'withheld',
   issuesOnly: true,
   sendPageMap: false,
-  traceSameOrigin: false
+  traceSameOrigin: false,
+  inviteKey: import.meta.env.VITE_BOOSTHIS_INVITE_KEY,
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
